@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+        <link rel="stylesheet" href="style1.css"/>
+    	<script>
+          function calculateSpeed(){
+            document.getElementById('result').innerText="";
+             // fetch values from body
+            const distance = parseFloat(document.getElementById('distance').value);
+            const time = parseFloat(document.getElementById('time').value);
+            // formula for calculation speed
+            const speed = distance/time;
+            // to print speed
+            document.getElementById('result').innerText= "Speed : "+ speed;
+          }
+	</script>
+</head>
+<body>
+      <div class="container">
+             <h2>------ Speed Calculator -----</h2>
+        <!-- Input -->
+         Distance : <input type="number" id="distance" min="0" step="0.1" required>
+        <br><br>
+         Time : <input type="number" id="time" min="0" step="0.1" required>
+        <br><br>
+        <!-- button to calculate output -->
+        <input type="button" value="Speed" onclick="calculateSpeed()">
+        <br><br>
+        <!-- button to print output -->
+        <div id="result"></div>
+    </div>
+
+</body>
+</html>

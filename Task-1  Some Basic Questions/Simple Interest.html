@@ -1,0 +1,35 @@
+<!-- Creating a webpage for creating  simple interest calculator -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Question 1</title>
+    <link rel="stylesheet" href="style1.css" />
+    <script>
+      function calculateSI() {
+        document.getElementById("result").innerText = "";
+        // fetch values from text field
+        const principle = parseFloat(document.getElementById("p").value);
+        const rate = parseFloat(document.getElementById("r").value);
+        const time = parseFloat(document.getElementById("t").value);
+        const si = (principle * rate * time) / 100;
+        document.getElementById("result").innerText = "S.I : " + si;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>------ Simple Intest -----</h2>
+    <!-- Input-->
+    Principle : <input type="number" id="p" min="0" step="1" required />
+    <br /><br />
+    Rate : <input type="number" id="r" min="0" step="0.01" required />
+    <br /><br />
+    Time : <input type="number" id="t" min="0" step="1" required /> <br /><br />
+    <!-- button to calculate output -->
+    <input type="button" value="SimpleInterest" onclick="calculateSI()" />
+    <br /><br />
+    <!-- button to print output -->
+    <div id="result"></div>
+  </body>
+</html>

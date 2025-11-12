@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <link rel="stylesheet" href="style1.css"/>
+
+    <script>
+       function calculateCI() {
+        document.getElementById('result').innerText="";
+         // fetch values from body
+        const principal = parseFloat(document.getElementById("principal").value);
+        const rate = parseFloat(document.getElementById("rate").value);
+        const times = parseFloat(document.getElementById("times").value);
+        const years = parseFloat(document.getElementById("years").value);
+        // validation
+        if (isNaN(principal) || isNaN(rate) || isNaN(times) || isNaN(years)) {
+          document.getElementById("result").innerText = "Please enter all values correctly.";
+          return;
+        }
+        // Formula to calculate CI
+        const amount = principal * Math.pow((1 + (rate / 100) / times), times * years);
+        document.getElementById("result").innerText = "Amount : " + amount.toFixed(2);
+      }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h2>Compund Interest</h2>
+       <!-- Input -->
+       Principle : <input type="number" id="principal" placeholder="e.g. 1000" step="1" required />
+       <br><br>
+       Annual Rate  : <input type="number" id="rate" placeholder="e.g. 5" step="0.1" required/>
+       <br><br>
+       Times Compounded :<input type="number" id="times" placeholder="e.g. 12" step="1" required/>
+       <br><br>
+       Number of years :<input type="number" id="years" placeholder="e.g. 10" step="1" required />
+       <br><br>
+      <!-- button to calculate output -->
+       <input type="button" value="Compound Interest" onclick="calculateCI()">
+      <br><br>
+       <!-- button to print output -->
+       <div id="result"></div>
+    </div>
+    
+</body>
+</html>

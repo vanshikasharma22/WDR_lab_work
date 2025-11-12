@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question 2</title>
+    <link rel="stylesheet" href="style1.css" />
+
+    <script>
+        function calculateAvg() {
+            document.getElementById('result').innerText = "";
+            // fetch values from body
+            const Num1 = parseFloat(document.getElementById('num1').value);
+            const Num2 = parseFloat(document.getElementById('num2').value);
+            const Num3 = parseFloat(document.getElementById('num3').value);
+            const Num4 = parseFloat(document.getElementById('num4').value);
+            const Num5 = parseFloat(document.getElementById('num5').value);
+            const avg = (Num1 + Num2 + Num3 + Num4 + Num5) / 5;
+            document.getElementById('result').innerText = "Average : " + avg;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>------ Average of 5 Numbers -----</h2>
+        <!--Input-->
+        Number 1 : <input type="number" id="num1" min="0" step="0.1" required>
+        <br><br>
+        Number 2 : <input type="number" id="num2" min="0" step="0.1" required>
+        <br><br>
+        Number 3 : <input type="number" id="num3" min="0" step="0.1" required>
+        <br><br>
+        Number 4 : <input type="number" id="num4" min="0" step="0.1" required>
+        <br><br>
+        Number 5 : <input type="number" id="num5" min="0" step="0.1" required>
+        <br><br>
+        <!-- button to calculate output -->
+        <input type="button" value="Average" onclick="calculateAvg()">
+        <br><br>
+        <!-- button to print output -->
+        <div id="result"></div>
+    </div>
+
+
+</body>
+
+</html>
