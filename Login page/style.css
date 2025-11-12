@@ -1,0 +1,70 @@
+/* Basic page styling */
+body {
+  font-family: Arial, sans-serif; /* Clean, readable font */
+  background-color: #ffffff; /* White background */
+  display: flex; /* Center the content horizontally and vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of viewport */
+  margin: 0;
+}
+
+/* Container for the login box */
+.login-container {
+  background-color: #f9f9f9; /* Light gray background for contrast */
+  padding: 40px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 300px; /* Fixed width for consistency */
+  text-align: center;
+}
+
+/* Heading style */
+.login-container h2 {
+  color: #2b43d6; /* Blue color like the image */
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* Label styling for input fields */
+label {
+  display: block; /* Each label on a new line */
+  text-align: left;
+  color: gray;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Input fields styling */
+input {
+  width: 100%; /* Full width inputs */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 2px solid #ccc; /* Only bottom border like image */
+  outline: none;
+  font-size: 14px;
+}
+
+/* Change border color when typing */
+input:focus {
+  border-bottom: 2px solid #2b43d6; /* Blue underline on focus */
+}
+
+/* Submit button styling */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2b43d6; /* Blue button */
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s; /* Smooth hover transition */
+}
+
+/* Hover effect for button */
+button:hover {
+  background-color: #1e32a8; /* Slightly darker blue */
+}
