@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Input field for task -->
+      <input
+        type="text"
+        id="task"
+        placeholder="Enter task"
+        class="textField"
+        required
+      />
+
+      <!-- Button to add the task -->
+      <input
+        type="button"
+        value="Add Task"
+        onclick="addtask()"
+        class="addtask"
+      />
+      <!-- Div where we give output of error message-->
+      <div id="error_msg"></div>
+
+      <!-- List of tasks -->
+      <ul id="tasklist"></ul>
+    </div>
+
+    <script src="todo.js"></script>
+  </body>
+</html>
