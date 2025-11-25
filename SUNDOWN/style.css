@@ -1,0 +1,196 @@
+/* Importing custom fonts */
+@font-face {
+    font-family: neu;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+@font-face {
+    font-family: neu;
+    font-weight: 100;
+    src: url(./NeueHaasDisplayLight.ttf);
+}
+/* ✔ Loads custom fonts and assigns them the name "neu".
+✔ Three different font weights (normal, light, roman) are included. */
+
+
+
+@font-face {
+    font-family: neu;
+    font-weight: 200;
+    src: url(./NeueHaasDisplayRoman.ttf);
+}
+
+/* Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: neu;
+}
+/* ✔ Removes default browser margins and padding.
+✔ Applies the custom font to all elements.
+✔ Ensures consistent sizing with box-sizing: border-box. */
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+/* ✔ Makes sure the webpage covers the full screen. */
+
+/* Main container */
+#main {
+    /* background-color: #000; */
+    position: relative;
+    z-index: 10;
+}
+/* Makes content layered above the background elements. */
+
+/* Page 1 styling */
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+/* Covers full height of the screen.
+✔ Has a soft off-white background. */
+
+/* Navbar container */
+nav {
+    padding: 2vw 0vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+}
+/* Horizontal navigation bar with logo on left and menu on right. */
+
+/* Right side navigation options */
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+/* Navigation buttons */
+#nav-part2 h4 {
+    padding: 10px 20px;
+    border: 1px solid #0000003c;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000000bb;
+    transition: all ease 0.4s;
+    position: relative;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+/* A black background slides up on hover.
+✔ Text color switches to white. */
+
+/* Background fill animation for nav items */
+#nav-part2 h4::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+/* On hover, black background slides up */
+#nav-part2 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+/* Navigation links */
+#nav-part2 h4 a {
+    color: #000000bb;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+
+/* On hover, link text becomes white */
+#nav-part2 h4:hover a {
+    color: #fff;
+}
+
+/* Center section of page 1 */
+#center {
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom: 2.5vw;
+}
+
+/* Left text block */
+#left h3 {
+    width: 25vw;
+    font-size: 1.8vw;
+    line-height: 2vw;
+}
+
+/* Large heading on right */
+#center h1 {
+    font-size: 10vw;
+    text-align: right;
+    line-height: 8vw;
+}
+
+/*Two-column layout:
+Left: description text
+Right: big title  */
+
+/* Background video */
+#page1 video {
+    position: relative;
+    border-radius: 30px;
+    margin-top: 4vw;
+    width: 100%;
+}
+/* Adds a smooth rounded video background. */
+/* Hero animation shapes */
+/* These shapes create the orange fluid animation. */
+#hero-shape{
+     position: absolute;
+     width: 36vw;
+     height: 36vw;
+     right: 0;
+     top: 65vh;
+}
+
+/* Big blurred orange circle */
+#hero-1{
+    height: 100%;
+    width: 100%;
+    background-color: #FE320A;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+}
+
+/* Moving blurred gradient circle */
+#hero-2{
+    height: 30vw;
+    width: 30vw;
+    background:linear-gradient(#FE320A , #fe3f0a);
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    position: absolute;
+    filter: blur(25px);
+    animation: anime2 3s
+    /* Shapes slightly move and rotate to create a liquid, organic animation. */
+}

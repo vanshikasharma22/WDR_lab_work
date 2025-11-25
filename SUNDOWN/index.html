@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- This project is a modern, animated website inspired by the Sundown Studio theme.
+It uses HTML, CSS, JavaScript, , and Locomotive Scroll to create a smooth and interactive user experience. -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sundown Studio</title>
+
+    <!-- Website favicon -->
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+
+    <!-- Locomotive Scroll CSS for smooth scrolling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="Style.css">
+</head>
+<!-- The HTML file is divided into three main pages/sections inside one file:
+
+🔹 Page 1: Hero Section
+🔹 Page 2: Scrolling Text + About Section
+🔹 Page 3: Image Hover Interaction Section
+
+A fixed image container and multiple animations make the website interactive. -->
+
+<body>
+
+    <!-- Fixed image that updates when hovering elements -->
+    <div id="fixed-image"></div>
+
+    <!-- Main wrapper for all pages -->
+    <div id="main">
+
+        <!-- PAGE 1 (Hero Section) -->
+        <div id="page1">
+
+            <!-- Navbar -->
+            <!-- Contains the company logo and three menu items:
+            Home, Studio, Contact
+
+            Navigation items have hover effects controlled by CSS. -->
+            <nav>
+                <!-- Logo -->
+                <img src="https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15c2_Sundown%20logo.svg"
+                    alt="">
+
+                <!-- Navigation links -->
+                <div id="nav-part2">
+                    <h4><a href="#">Home</a></h4>
+                    <h4><a href="#">Studio</a></h4>
+                    <h4><a href="#">Contact</a></h4>
+                </div>
+            </nav>
+
+            <!-- Hero Text Section -->
+            <!-- The main hero area is divided into left and right: -->
+            <div id="center">
+                <div id="left">
+                    <!-- Shows a short description of the studio.
+
+Text explains what Sundown Studio does. -->
+                    <h3>
+                        Sundown is a multi-disciplinary studio focused on creating
+                        unique, end-to-end experiences and environments.
+                    </h3>
+                </div>
+
+                <div id="right">
+                    <!-- Displays the bold headline: -->
+                    <h1>
+                        SPACES <br>
+                        THAT <br>
+                        INSPIRE <br>
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Decorative Hero Shapes -->
+            <!-- There are three animated shapes: -->
+            <div id="hero-shape">
+                <div id="hero-1"></div>
+                <!-- Main background circular shape -->
+                <div id="hero-2"></div>
+                <!-- Smaller moving shapes with animation -->
+                <div id="hero-3"></div>
+            </div>
+            <!-- These shapes have blur effects and animate continuously using the @keyframes CSS animation. -->
+
+            <!-- Background Video -->
+            <!-- A fullscreen video plays automatically: -->
+            <video autoplay loop muted src="video.mp4"></video>
+        </div>
+        <!-- Attributes used: autoplay, loop, muted -->
+
+        <!-- PAGE 2 -->
+        <div id="page2">
+
+            <!-- Moving Text Marquee -->
+            <div id="moving-text">
+
+                <!-- Repeated groups to create seamless scrolling text -->
+                <div class="con">
+                    <h1>EXPERIENCE</h1>
+                    <div id="circle"></div>
+                    <h1>CONTENT</h1>
+                    <div id="circle"></div>
+                    <h1>ENVIRONMENT</h1>
+                    <div id="circle"></div>
+                </div>
+
+                <div class="con">
+                    <h1>EXPERIENCE</h1>
+                    <div id="circle">
